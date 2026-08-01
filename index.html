@@ -56,6 +56,34 @@ button{
   border-radius:30px;
   cursor:pointer;
 }
+  .gallery{
+display:none;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+padding:20px;
+margin-top:20px;
+overflow-y:auto;
+height:100vh;
+}
+
+.gallery img{
+width:180px;
+border-radius:15px;
+box-shadow:0 0 15px hotpink;
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
 </style>
 
 </head>
@@ -75,12 +103,56 @@ button{
   </p>
 
   <button>Unlock My Heart</button>
+<div class="gallery" id="gallery">
+
+<img src="assets/photos/me1.jpg">
+<img src="assets/photos/me2.jpg">
+<img src="assets/photos/me3.jpg">
+<img src="assets/photos/me4.jpg">
+<img src="assets/photos/me5.jpg">
+<img src="assets/photos/me6.jpg">
+<img src="assets/photos/me8.jpg">
+<img src="assets/photos/me9.jpg">
+
+<img src="assets/photos/jyoti1.jpg">
+<img src="assets/photos/jyoti2.jpg">
+<img src="assets/photos/jyoti3.jpg">
+<img src="assets/photos/jyoti5.jpg">
+<img src="assets/photos/jyoti6.jpg">
+<img src="assets/photos/jyoti7.jpg">
+<img src="assets/photos/jyoti8.jpg">
+<img src="assets/photos/jyoti9.jpg">
+<img src="assets/photos/jyoti10.jpg">
+
+<img src="assets/photos/together1.jpg">
+<img src="assets/photos/together2.jpg">
+<img src="assets/photos/together3.jpg">
+<img src="assets/photos/together4.jpg">
+<img src="assets/photos/together5.jpg">
+<img src="assets/photos/together6.jpg">
+<img src="assets/photos/together7.jpg">
+<img src="assets/photos/together8.jpg">
+<img src="assets/photos/together9.jpg">
+
+<img src="assets/photos/chat1.jpg">
+<img src="assets/photos/chat2.jpg">
+<img src="assets/photos/chat3.jpg">
 
 </div>
+</div>
 <script>
-document.querySelector("button").onclick = function() {
-  alert("❤️ Welcome Jyoti ❤️\n\nYou unlocked Prashant's Heart!");
-};
+
+document.querySelector("button").onclick=function(){
+
+document.querySelector(".heart").style.display="none";
+document.querySelector("h1").style.display="none";
+document.querySelector("p").style.display="none";
+document.querySelector("button").style.display="none";
+
+document.getElementById("gallery").style.display="flex";
+
+}
+
 </script>
 </body>
 
